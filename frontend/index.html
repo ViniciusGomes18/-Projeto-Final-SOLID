@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Estacionamento Inteligente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div>
+          <h1 class="title">Estacionamento Inteligente</h1>
+          <p className="subtitle">
+            Controle simples de entradas, saídas e faturamento.
+          </p>
+        </div>
+      </header>
+
+      <main class="main">
+        <section id="feedback" class="feedback"></section>
+
+        <div class="cards-grid">
+          <section class="card">
+            <h2 class="card-title">Registrar entrada</h2>
+            <p class="card-text">
+              Informe a placa e o tipo de veículo para registrar a entrada.
+            </p>
+
+            <form id="form-entry" class="form">
+              <label class="form-label" for="entry-plate">Placa</label>
+              <input
+                id="entry-plate"
+                type="text"
+                class="form-input"
+                placeholder="Ex.: ABC1D23"
+                autocomplete="off"
+                required
+              />
+
+              <label class="form-label" for="entry-type">Tipo de veículo</label>
+              <select id="entry-type" class="form-input">
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+                <option value="caminhao">Caminhão</option>
+              </select>
+
+              <button type="submit" class="button button-primary">
+                Registrar entrada
+              </button>
+            </form>
+          </section>
+
+          <section class="card">
+            <h2 class="card-title">Registrar saída</h2>
+            <p class="card-text">
+              Informe a placa e, se quiser, o número de horas para simular a
+              cobrança.
+            </p>
+
+            <form id="form-exit" class="form">
+              <label class="form-label" for="exit-plate">Placa</label>
+              <input
+                id="exit-plate"
+                type="text"
+                class="form-input"
+                placeholder="Ex.: ABC1D23"
+                autocomplete="off"
+                required
+              />
+
+              <label class="form-label" for="exit-hours">
+                Horas (opcional)
+              </label>
+              <input
+                id="exit-hours"
+                type="number"
+                min="1"
+                class="form-input"
+                placeholder="Ex.: 2"
+              />
+
+              <button type="submit" class="button button-primary">
+                Registrar saída
+              </button>
+            </form>
+          </section>
+        </div>
+
+        <section class="card card-full">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-title">Relatório por tipo de veículo</h2>
+              <p class="card-text">
+                Visão geral de total de veículos e faturamento por tipo.
+              </p>
+            </div>
+            <div class="card-actions">
+              <button id="btn-relatorio" class="button button-outline">
+                Atualizar relatório
+              </button>
+              <span class="last-update">
+                Última atualização:
+                <span id="report-last-update">–</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Total de veículos</th>
+                  <th>Faturamento (R$)</th>
+                </tr>
+              </thead>
+              <tbody id="report-body">
+                <tr>
+                  <td colspan="3" class="table-empty">
+                    Carregando relatório...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="summary-row">
+            <div class="summary-item">
+              <span class="summary-label">Carros</span>
+              <span id="summary-car" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Motos</span>
+              <span id="summary-moto" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Caminhões</span>
+              <span id="summary-truck" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Faturamento total</span>
+              <span id="summary-total" class="summary-value">R$ 0,00</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Sistema de Controle de Estacionamento</span>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

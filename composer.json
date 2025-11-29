@@ -1,0 +1,12 @@
+{
+  "name": "grupo/estacionamento",
+  "description": "Controle de Estacionamento Inteligente",
+  "autoload": {
+    "psr-4": {
+      "App\\": ""
+    }
+  },
+  "require": {
+    "ext-pdo": "*"
+  }
+}
