@@ -6,6 +6,13 @@ Este projeto implementa um sistema simples para registrar a entrada e saída de 
 Também foi desenvolvido com o objetivo de praticar princípios como SOLID, DRY, KISS, boas práticas de Clean Code e alguns conceitos de Object Calisthenics, utilizando PHP 8+, Composer e SQLite em uma estrutura modular organizada nas pastas `Application`, `Domain` e `Infra`.  
 O sistema ainda apresenta um relatório geral contendo o total de veículos atendidos e o faturamento por tipo.
 
+## Participantes
+Vinicius da Silva Gomes RA 2010424
+
+Guilherme Dalanora Dos Santos RA 1991839
+
+João Pedro Pereira Guerra RA 2006484
+
 ## Requisitos
 
 - PHP 8 ou superior  
